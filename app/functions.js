@@ -24,11 +24,18 @@ exports.functionsAnswers = {
   },
 
   useArguments : function() {
+    var arr = Array.prototype.slice.call(arguments);
+    var startVal = 0;
 
+    for(var i = 0; i < arr.length; i++){
+      startVal += arr[i];
+    }
+
+    return startVal;
   },
 
   callIt : function(fn) {
-    fn.call(this, arguments);
+
   },
 
   partialUsingArguments : function(fn) {

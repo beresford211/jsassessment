@@ -10,6 +10,7 @@ exports.objectsAnswers =  {
   },
 
   iterate : function(obj) {
+  
   }
   
 };

@@ -6,8 +6,9 @@ exports.numbersAnswers = {
   },
 
   base10: function(str) {
-
+    return parseInt(str, 2);
   },
+
 
   convertToBinary: function(n) {
       if (n < 0 || n > 255 || n % 1 !== 0) {
@@ -17,6 +18,7 @@ exports.numbersAnswers = {
   },
 
   multiply: function(a, b) {
-    return a * b;
+    var c = a * b;
+    return Number(c.toFixed(1));
   }
 };
