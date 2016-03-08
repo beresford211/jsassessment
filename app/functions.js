@@ -16,7 +16,7 @@ exports.functionsAnswers = {
   },
 
   makeClosures : function(arr, fn) {
-      return fn(arr);
+
   },
 
   partial : function(fn, str1, str2) {
@@ -44,6 +44,8 @@ exports.functionsAnswers = {
   },
 
   curryIt : function(fn) {
+
+    return fn(); 
 
   }
 };
