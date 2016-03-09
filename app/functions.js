@@ -17,6 +17,10 @@ exports.functionsAnswers = {
 
   makeClosures : function(arr, fn) {
 
+    return function(){
+      console.log(arr);
+    };
+
   },
 
   partial : function(fn, str1, str2) {
