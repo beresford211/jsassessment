@@ -12,7 +12,8 @@ exports.regexAnswers = {
   },
 
   endsWithVowel : function(str) {
-
+    var check = /^.*[aeiou]([^aeiou]|nt)$/;
+    reg.text(check);
   },
 
   captureThreeNumbers : function(str) {
