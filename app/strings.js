@@ -2,27 +2,31 @@ exports = (typeof window === 'undefined') ? global : window;
 
 exports.stringsAnswers = {
   reduceString: function(str, amount) {
-    console.log(str, amount);
     var finalStr = "";
+    var current;
+    var temp;
 
-    var finalObj = str.split("").reduce(function(prev, current){
-        if(prev[current] === undefined){
-          prev[current] = 1;
-        } else if (prev[current] < amount){
-          prev[current]++;
-          if(prev[current] === amount){
-            
-          }
+    for(var i = 0; i < str.length; i++){
+       if(str[i] !== str[i - 1]){
+        temp = str[i];
+        finalStr += str[i];
+        current = 1;
+      } else if (str[i] === temp){
+        if(current < amount){
+          finalStr += str[i];
+          current++;
         }
-          return prev;
-    }, {});
-    console.log(finalStr);
-    // return Object.keys(finalObj).join("");
+      }
+    }
+
+    return finalStr;
+
   },
   
   wordWrap: function(str, cols) {
 
   },
+
   reverseString: function(str) {
     var finalStr = "";
 
