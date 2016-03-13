@@ -2,12 +2,15 @@ exports = (typeof window === 'undefined') ? global : window;
 
 exports.functionsAnswers = {
   argsAsArray : function(fn, arr) {
+    return fn.apply(this, arr);
 
   },
 
   speak : function(fn, obj) {
-
+    var speaker = fn.bind(obj);
+    return speaker();
   },
+
 
   functionFunction : function(str) {
     return function(strTwo){
@@ -18,7 +21,7 @@ exports.functionsAnswers = {
   makeClosures : function(arr, fn) {
 
     return function(){
-      console.log(arr);
+      // console.log(arr);
     };
 
   },
