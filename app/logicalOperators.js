@@ -7,7 +7,6 @@ exports.logicalOperatorsAnswers = {
     } else {
       return false;
     }
-
   },
 
   and : function(a, b) {

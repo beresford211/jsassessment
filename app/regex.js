@@ -4,7 +4,7 @@ exports.regexAnswers = {
   containsNumber : function(str) {
      var reg = /^\d+$/;
      //works for numbers not strings yet.
-     reg.text(str);
+     return reg.test(str);
   },
 
   containsRepeatingLetter : function(str) {
@@ -13,7 +13,7 @@ exports.regexAnswers = {
 
   endsWithVowel : function(str) {
     var check = /^.*[aeiou]([^aeiou]|nt)$/;
-    reg.text(check);
+    return check.test(reg);
   },
 
   captureThreeNumbers : function(str) {

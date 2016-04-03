@@ -2,7 +2,9 @@ exports = (typeof window === 'undefined') ? global : window;
 
 exports.numbersAnswers = {
   valueAtBit: function(num, bit) {
-
+    var result = num.toString(bit);
+    console.log(num, result);
+    return result;
   },
 
   base10: function(str) {

@@ -28,7 +28,7 @@ exports.bestPracticesAnswers = {
   },
 
   parseInt : function(num) {
-    return parseInt(num);
+
   },
 
   identity : function(val1, val2) {

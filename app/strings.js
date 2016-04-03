@@ -18,22 +18,25 @@ exports.stringsAnswers = {
         }
       }
     }
-
     return finalStr;
-
   },
   
   wordWrap: function(str, cols) {
-
+    var finalStr = "";
+    for(var i = 0; i < str.length; i++){
+      if(str[i] === " "){
+        str[i] = "\"" + "n";
+      }
+      finalStr += str[i];
+    }
+    return finalStr;
   },
 
   reverseString: function(str) {
     var finalStr = "";
-
-    for(var i = str.length - 1; i >= 0; i--){
-      finalStr += str[i];
-    }
-
+      for(var i = str.length - 1; i >= 0; i--){
+        finalStr += str[i];
+      }
     return finalStr;
   }
 };
