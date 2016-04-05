@@ -6,15 +6,17 @@ exports.objectsAnswers =  {
   },
 
   alterObjects : function(constructor, greeting) {
-   var final = new constructor();
-
+    
 
   },
 
   iterate : function(obj) {
-    for(var i in obj){
-      console.log(obj[i]);
+    var finalResult = [].slice.call(arguments, 0);
+    var others = [];
+    for(var i in finalResult[0]){
+      others.push(i + ": " + finalResult[0][i]);
     }
+    return others.slice(0, 2);
   }
   
 };
