@@ -19,10 +19,10 @@ exports.functionsAnswers = {
   },
 
   makeClosures : function(arr, fn) {
-
-    return function(){
-      // console.log(arr);
-    };
+    var val = arr;
+      return function(){
+          return fn(arr);
+      };
 
   },
 
@@ -47,12 +47,11 @@ exports.functionsAnswers = {
   },
 
   partialUsingArguments : function(fn) {
-
   },
 
   curryIt : function(fn) {
-
-    return fn(); 
-
+    return function(fn, x){
+      return 
+    }; 
   }
 };
