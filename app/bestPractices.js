@@ -8,7 +8,7 @@ exports = (typeof window === 'undefined') ? global : window;
 
 exports.bestPracticesAnswers = {
   globals : function() {
-  var myObject = {
+   myObject = {
        name : 'Jory'
     };
 
@@ -28,7 +28,7 @@ exports.bestPracticesAnswers = {
   },
 
   parseInt : function(num) {
-
+    
   },
 
   identity : function(val1, val2) {
