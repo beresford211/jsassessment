@@ -50,8 +50,10 @@ exports.functionsAnswers = {
   },
 
   curryIt : function(fn) {
-    return function(fn, x){
-      return 
+    var func = this, args = [].slice.call(fn);  
+    return function(){
+      var arg = [].slice.call(arguments);
+      return func.apply(this, arg.concat(args));
     }; 
   }
 };

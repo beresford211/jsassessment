@@ -22,12 +22,18 @@ exports.stringsAnswers = {
   },
   
   wordWrap: function(str, cols) {
+    console.log("cols", cols, "OISDFSD", str);
     var finalStr = "";
+    var counter = 0;
     for(var i = 0; i < str.length; i++){
-      if(str[i] === " "){
-        str[i] = "\"" + "n";
+      if(counter === 5){
+          finalStr += str[i];
+          finalStr += "\n";
+          counter = 1;
+      } else if(str[i] != " "){
+        finalStr += str[i];
+        counter++;
       }
-      finalStr += str[i];
     }
     return finalStr;
   },

@@ -2,13 +2,12 @@ exports = (typeof window === 'undefined') ? global : window;
 
 exports.regexAnswers = {
   containsNumber : function(str) {
-     var reg = /^\d+$/;
-     //works for numbers not strings yet.
-     return reg.test(str);
+     var regex = /[0-9]/;
+     return regex.test(str);
   },
 
   containsRepeatingLetter : function(str) {
-
+      // console.log(str)
   },
 
   endsWithVowel : function(str) {
