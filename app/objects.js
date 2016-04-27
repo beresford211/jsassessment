@@ -6,8 +6,7 @@ exports.objectsAnswers =  {
   },
 
   alterObjects : function(constructor, greeting) {
-    
-
+    console.log(constructor, greeting)
   },
 
   iterate : function(obj) {
