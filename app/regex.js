@@ -7,12 +7,11 @@ exports.regexAnswers = {
   },
 
   containsRepeatingLetter : function(str) {
-      // console.log(str)
+    
   },
 
   endsWithVowel : function(str) {
-    var check = /^.*[aeiou]([^aeiou]|nt)$/;
-    return check.test(reg);
+
   },
 
   captureThreeNumbers : function(str) {
